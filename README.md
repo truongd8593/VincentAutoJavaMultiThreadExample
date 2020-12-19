@@ -6,7 +6,7 @@ To run the project, open project in IntelliJ and run the file "main.java" locate
 
 Question 2 and question 4 should be run separately, ie.
 to obtain output from question 2, please comment all code lines of question 4 in "main.java",
-and vise versa.
+and vice versa.
 
 Question 2's output
 ********************************
