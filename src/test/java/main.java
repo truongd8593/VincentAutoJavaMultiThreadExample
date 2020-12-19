@@ -13,12 +13,19 @@ public class main {
         myToyotaCar.setSeats(seats)
                 .setBrand(toyotaBrand)
                 .setWheels(wheels)
-                .setDoors(doors);
+                .setDoors(doors)
+                .setMaxSpeed(100);
+        myToyotaCar.info();
 
         Car myBmwCar = new Car();
-        myToyotaCar.setSeats(seats)
+        myBmwCar.setSeats(seats)
                 .setBrand(bmwBrand)
                 .setWheels(wheels)
-                .setDoors(doors);
+                .setDoors(doors)
+                .setMaxSpeed(200);
+        myBmwCar.info();
+
+        myToyotaCar.run();
+        myBmwCar.run();
     }
 }
