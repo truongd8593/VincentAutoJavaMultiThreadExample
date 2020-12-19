@@ -1,4 +1,4 @@
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Runnable {
 
     private int seats;
 
@@ -18,6 +18,14 @@ public class Car extends Vehicle {
         System.out.println("seats = " + getSeats());
         System.out.println("maxSpeed = " + getMaxSpeed());
         return this;
+    }
+
+    public void run() {
+        System.out.println(Thread.currentThread().getName()
+                + ", executing run() method!");
+        for (int i = 0; i < Constant.RUN_TIMES; i++) {
+            System.out.println(getMaxSpeed());
+        }
     }
 
 }

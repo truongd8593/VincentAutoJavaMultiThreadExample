@@ -43,18 +43,17 @@ public class Vehicle {
         return this.maxSpeed;
     }
 
-    public Vehicle run() {
-        for (int i = 0; i < Constant.RUN_TIMES; i++) {
-            System.out.println(getMaxSpeed());
-        }
-        return this;
-    }
-
     public Vehicle info() {
         System.out.println("brand = " + getBrand());
         System.out.println("wheels = " + getWheels());
         System.out.println("doors = " + getDoors());
         System.out.println("maxSpeed = " + getMaxSpeed());
         return this;
+    }
+
+    public void run() {
+        for (int i = 0; i < Constant.RUN_TIMES; i++) {
+            System.out.println(getMaxSpeed());
+        }
     }
 }
