@@ -12,11 +12,8 @@ public class Car extends Vehicle implements Runnable {
     }
 
     public Car info() {
-        System.out.println("brand = " + getBrand());
-        System.out.println("wheels = " + getWheels());
-        System.out.println("doors = " + getDoors());
+        super.info();
         System.out.println("seats = " + getSeats());
-        System.out.println("maxSpeed = " + getMaxSpeed());
         return this;
     }
 
