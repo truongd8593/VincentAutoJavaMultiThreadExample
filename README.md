@@ -40,31 +40,30 @@ Question 4's output
 brand = Toyota
 wheels = 4
 doors = 4
-seats = 5
 maxSpeed = 100
+seats = 5
 brand = BMW
 wheels = 4
 doors = 4
-seats = 5
 maxSpeed = 200
+seats = 5
 100
 200
 100
-100
-100
-100
 200
 100
-100
+200
 100
 200
 100
+200
 100
 200
+100
 200
+100
 200
+100
 200
+100
 200
-200
-200
-
