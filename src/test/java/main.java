@@ -37,7 +37,7 @@ public class main {
     }
 
     @Test(priority = 1)
-    public void questionTwo() throws InterruptedException {
+    public void questionTwoAndThree() throws InterruptedException {
         System.out.println(Constant.LINE_BREAK);
         System.out.println("Question 2's output");
         System.out.println(Constant.LINE_BREAK);
