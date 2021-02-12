@@ -6,6 +6,15 @@ public class main {
     private Car myToyotaCar = new Car();
     private Car myBmwCar = new Car();
 
+    private Thread toyotaThread = new Thread(myToyotaCar);
+    private Thread bmwThread = new Thread(myBmwCar);
+
+    private ConcurrentCar myNewToyotaCar = new ConcurrentCar();
+    private ConcurrentCar myNewBmwCar = new ConcurrentCar();
+
+    private Thread toyotaConcurrentThread = new Thread(myNewToyotaCar);
+    private Thread bmwConcurrentThread = new Thread(myNewBmwCar);
+
     @BeforeClass
     public void setUp() {
 
@@ -16,6 +25,18 @@ public class main {
                 .setMaxSpeed(100);
 
         myBmwCar.setSeats(Constant.SEATS)
+                .setBrand(Constant.BMW)
+                .setWheels(Constant.WHEELS)
+                .setDoors(Constant.DOORS)
+                .setMaxSpeed(200);
+
+        myNewToyotaCar.setSeats(Constant.SEATS)
+                .setBrand(Constant.TOYOTA)
+                .setWheels(Constant.WHEELS)
+                .setDoors(Constant.DOORS)
+                .setMaxSpeed(100);
+
+        myNewBmwCar.setSeats(Constant.SEATS)
                 .setBrand(Constant.BMW)
                 .setWheels(Constant.WHEELS)
                 .setDoors(Constant.DOORS)
@@ -42,9 +63,6 @@ public class main {
         System.out.println("Question 2's output");
         System.out.println(Constant.LINE_BREAK);
 
-        Thread toyotaThread = new Thread(myToyotaCar);
-        Thread bmwThread = new Thread(myBmwCar);
-
         toyotaThread.start();
         Thread.sleep(10);
         bmwThread.start();
@@ -56,26 +74,8 @@ public class main {
         System.out.println("Question 4's output");
         System.out.println(Constant.LINE_BREAK);
 
-        ConcurrentCar myNewToyotaCar = new ConcurrentCar();
-        ConcurrentCar myNewBmwCar = new ConcurrentCar();
-
-        myNewToyotaCar.setSeats(Constant.SEATS)
-                .setBrand(Constant.TOYOTA)
-                .setWheels(Constant.WHEELS)
-                .setDoors(Constant.DOORS)
-                .setMaxSpeed(100);
-
-        myNewBmwCar.setSeats(Constant.SEATS)
-                .setBrand(Constant.BMW)
-                .setWheels(Constant.WHEELS)
-                .setDoors(Constant.DOORS)
-                .setMaxSpeed(200);
-
         myNewToyotaCar.info();
         myNewBmwCar.info();
-
-        Thread toyotaConcurrentThread = new Thread(myNewToyotaCar);
-        Thread bmwConcurrentThread = new Thread(myNewBmwCar);
 
         toyotaConcurrentThread.start();
         bmwConcurrentThread.start();
